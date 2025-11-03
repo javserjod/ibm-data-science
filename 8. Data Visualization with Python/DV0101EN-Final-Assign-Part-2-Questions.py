@@ -34,14 +34,14 @@ year_list = [i for i in range(1980, 2024, 1)]
 # Create the layout of the app
 app.layout = html.Div([
     #TASK 2.1 Add title to the dashboard
-    html.H1("Automobile Sales Statistics Dashboard", style={"textAlign":"center", "color":"#503D36", "font-size":24}),#Include style for title
+    html.H1("Automobile Sales Statistics Dashboard", style={"textAlign":"center", "color":"#0000FF", "font-size":24}),#Include style for title
     #TASK 2.2: Add two dropdown menus
     html.Div([
         html.Label("Select Statistics:"),
         dcc.Dropdown(
             id='dropdown-statistics',
             options=dropdown_options,
-            value='Yearly Statistics',
+            value='Select Statistics',
             placeholder='Select a report type',
             style={"width":"80%", "padding": "3px", "font-size":"20px", "textAlign":"center"}
         )
@@ -49,8 +49,8 @@ app.layout = html.Div([
     html.Div(dcc.Dropdown(
             id='select-year',
             options=[{'label': i, 'value': i} for i in year_list],
-            value='select-year',
-            placeholder="select-year",
+            value='Select-year',
+            placeholder="Select-year",
             style={"width":"80%", "padding": "3px", "font-size":"20px", "textAlign":"center"}
         )),
 
